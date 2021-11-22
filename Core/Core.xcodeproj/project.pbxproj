@@ -15,6 +15,7 @@
 		221B20F12742F4590057EA7A /* Optional+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221B20F02742F4590057EA7A /* Optional+.swift */; };
 		221B20F32742F47D0057EA7A /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221B20F22742F47D0057EA7A /* UIFont+.swift */; };
 		2233FCC7274C51E200AA07FE /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2233FCC6274C51E200AA07FE /* UITableView+.swift */; };
+		2233FCC9274C583400AA07FE /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2233FCC8274C583400AA07FE /* Typealias.swift */; };
 		223F6DEE2745BC3100D13A81 /* Encodable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223F6DEB2745BC3100D13A81 /* Encodable+.swift */; };
 		223F6E312745F66C00D13A81 /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223F6E302745F66C00D13A81 /* Int+.swift */; };
 		78929FA02DA5007C0D7DC081 /* Pods_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C8F30A4949E4F1C294EB10A /* Pods_Core.framework */; };
@@ -31,6 +32,7 @@
 		221B20F02742F4590057EA7A /* Optional+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+.swift"; sourceTree = "<group>"; };
 		221B20F22742F47D0057EA7A /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		2233FCC6274C51E200AA07FE /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
+		2233FCC8274C583400AA07FE /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		223F6DEB2745BC3100D13A81 /* Encodable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+.swift"; sourceTree = "<group>"; };
 		223F6E302745F66C00D13A81 /* Int+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+.swift"; sourceTree = "<group>"; };
 		241F59DBEB999A85CC9753AA /* Pods-Core.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.debug.xcconfig"; path = "Target Support Files/Pods-Core/Pods-Core.debug.xcconfig"; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				223F6DEB2745BC3100D13A81 /* Encodable+.swift */,
 				223F6E302745F66C00D13A81 /* Int+.swift */,
 				221B20F02742F4590057EA7A /* Optional+.swift */,
+				2233FCC8274C583400AA07FE /* Typealias.swift */,
 				221B20F22742F47D0057EA7A /* UIFont+.swift */,
 				2233FCC6274C51E200AA07FE /* UITableView+.swift */,
 			);
@@ -214,6 +217,7 @@
 				221B20F12742F4590057EA7A /* Optional+.swift in Sources */,
 				221B20E92742F3CC0057EA7A /* Binary.swift in Sources */,
 				221B20EF2742F4360057EA7A /* CaseIterable+.swift in Sources */,
+				2233FCC9274C583400AA07FE /* Typealias.swift in Sources */,
 				223F6E312745F66C00D13A81 /* Int+.swift in Sources */,
 				221B20ED2742F4290057EA7A /* Array+SafeIndex.swift in Sources */,
 				221B20F32742F47D0057EA7A /* UIFont+.swift in Sources */,
