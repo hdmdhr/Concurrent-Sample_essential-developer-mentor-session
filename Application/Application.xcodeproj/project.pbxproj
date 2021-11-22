@@ -10,7 +10,7 @@
 		158BA888B4D65BB933EC4FEC /* Pods_ApplicationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC64A590040A79B3A2863297 /* Pods_ApplicationTests.framework */; };
 		221B20AF2742EF800057EA7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221B20AE2742EF800057EA7A /* AppDelegate.swift */; };
 		221B20B12742EF800057EA7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221B20B02742EF800057EA7A /* SceneDelegate.swift */; };
-		221B20B32742EF800057EA7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221B20B22742EF800057EA7A /* ViewController.swift */; };
+		221B20B32742EF800057EA7A /* PlacesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221B20B22742EF800057EA7A /* PlacesListViewController.swift */; };
 		221B20B62742EF800057EA7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 221B20B42742EF800057EA7A /* Main.storyboard */; };
 		221B20B92742EF800057EA7A /* Application.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 221B20B72742EF800057EA7A /* Application.xcdatamodeld */; };
 		221B20BB2742EF810057EA7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 221B20BA2742EF810057EA7A /* Assets.xcassets */; };
@@ -21,6 +21,7 @@
 		2233FCAA274C481400AA07FE /* Domain.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 2233FC98274C47CB00AA07FE /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2233FCAB274C482600AA07FE /* Data.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 2233FC9F274C47D500AA07FE /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2233FCAC274C483100AA07FE /* Core.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 2233FCA7274C47DC00AA07FE /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2233FCBF274C4EA900AA07FE /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2233FCBE274C4EA900AA07FE /* PlaceCell.swift */; };
 		37F0A325AE842F1CAE58BB64 /* Pods_Application.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D77BB143793E496AE5390B62 /* Pods_Application.framework */; };
 		4C2046979315845503CAAA2A /* Pods_Application_ApplicationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2419140A41A14DD55845E70E /* Pods_Application_ApplicationUITests.framework */; };
 /* End PBXBuildFile section */
@@ -92,7 +93,7 @@
 		221B20AB2742EF800057EA7A /* Application.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Application.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		221B20AE2742EF800057EA7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		221B20B02742EF800057EA7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		221B20B22742EF800057EA7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		221B20B22742EF800057EA7A /* PlacesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesListViewController.swift; sourceTree = "<group>"; };
 		221B20B52742EF800057EA7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		221B20B82742EF800057EA7A /* Application.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Application.xcdatamodel; sourceTree = "<group>"; };
 		221B20BA2742EF810057EA7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -106,6 +107,7 @@
 		2233FC93274C47CB00AA07FE /* Domain.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Domain.xcodeproj; path = ../Domain/Domain.xcodeproj; sourceTree = "<group>"; };
 		2233FC99274C47D500AA07FE /* Data.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Data.xcodeproj; path = ../Data/Data.xcodeproj; sourceTree = "<group>"; };
 		2233FCA2274C47DC00AA07FE /* Core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Core.xcodeproj; path = ../Core/Core.xcodeproj; sourceTree = "<group>"; };
+		2233FCBE274C4EA900AA07FE /* PlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
 		2419140A41A14DD55845E70E /* Pods_Application_ApplicationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Application_ApplicationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C3C0C44BCC91A184184A3F2 /* Pods-Application-ApplicationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Application-ApplicationUITests.release.xcconfig"; path = "Target Support Files/Pods-Application-ApplicationUITests/Pods-Application-ApplicationUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4171E6587C84259001EBAB16 /* Pods-Application.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Application.release.xcconfig"; path = "Target Support Files/Pods-Application/Pods-Application.release.xcconfig"; sourceTree = "<group>"; };
@@ -171,7 +173,8 @@
 			children = (
 				221B20AE2742EF800057EA7A /* AppDelegate.swift */,
 				221B20B02742EF800057EA7A /* SceneDelegate.swift */,
-				221B20B22742EF800057EA7A /* ViewController.swift */,
+				221B20B22742EF800057EA7A /* PlacesListViewController.swift */,
+				2233FCBE274C4EA900AA07FE /* PlaceCell.swift */,
 				221B20B42742EF800057EA7A /* Main.storyboard */,
 				221B20BA2742EF810057EA7A /* Assets.xcassets */,
 				221B20BC2742EF810057EA7A /* LaunchScreen.storyboard */,
@@ -543,9 +546,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				221B20B92742EF800057EA7A /* Application.xcdatamodeld in Sources */,
-				221B20B32742EF800057EA7A /* ViewController.swift in Sources */,
+				221B20B32742EF800057EA7A /* PlacesListViewController.swift in Sources */,
 				221B20AF2742EF800057EA7A /* AppDelegate.swift in Sources */,
 				221B20B12742EF800057EA7A /* SceneDelegate.swift in Sources */,
+				2233FCBF274C4EA900AA07FE /* PlaceCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
