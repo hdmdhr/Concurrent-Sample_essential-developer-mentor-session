@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-Application/Pods-Application-frameworks.sh
+${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework
+${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
+${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework
+${BUILT_PRODUCTS_DIR}/netfox/netfox.framework

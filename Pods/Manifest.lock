@@ -1,0 +1,28 @@
+PODS:
+  - IQKeyboardManagerSwift (6.5.6)
+  - Kingfisher (7.1.1)
+  - netfox (1.19.0)
+  - Swinject (2.8.1)
+
+DEPENDENCIES:
+  - IQKeyboardManagerSwift
+  - Kingfisher (~> 7)
+  - netfox
+  - Swinject
+
+SPEC REPOS:
+  trunk:
+    - IQKeyboardManagerSwift
+    - Kingfisher
+    - netfox
+    - Swinject
+
+SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  Kingfisher: f738f9c4a3415823b8e2985d10aa2d6a9f37bc4d
+  netfox: efeec1d23406df6cd605212f09a40957bb5654eb
+  Swinject: 97112918bd7e0785dc2df7036213f3c8cbba6586
+
+PODFILE CHECKSUM: c1e8a90ac86cc0423f1368d061288f19e5f245fd
+
+COCOAPODS: 1.11.2
