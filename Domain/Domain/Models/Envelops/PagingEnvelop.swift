@@ -13,5 +13,8 @@ public typealias PagingEnvelop<T: Decodable> = Envelop<InnerPagingEnvelop<T>>
 public struct InnerPagingEnvelop<T: Decodable>: Decodable {
     public let items: [T]
     public let currentPage, totalPages, totalItems, perPage: Int
+    
+    /// Computed
+    public var isAllFetched: Bool { currentPage == totalPages }
 }
 
