@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum NetworkError: LocalizedError {
+public enum NetworkError: LocalizedError {
     
     /// Inner error is very likely to be an `EncodingError`
     case invalidRequest(innerError: Error)
@@ -15,7 +15,20 @@ enum NetworkError: LocalizedError {
     case urlError(URLError)
     case unknown(Error)
     
-    var errorDescription: String? {
+    public var errorTitle: String? {
+        switch self {
+        case .invalidRequest:
+            return "Invalid Request"
+        case .decodingError:
+            return "Invalid Response"
+        case .urlError:
+            return "URL Error"
+        case .unknown:
+            return "Unknown Error"
+        }
+    }
+    
+    public var errorDescription: String? {
         switch self {
         case .invalidRequest(let innerError):
             if let encodingError = innerError as? EncodingError {
