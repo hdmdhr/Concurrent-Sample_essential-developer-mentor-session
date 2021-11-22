@@ -18,6 +18,9 @@
 		221B20C92742EF810057EA7A /* ApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221B20C82742EF810057EA7A /* ApplicationTests.swift */; };
 		221B20D32742EF810057EA7A /* ApplicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221B20D22742EF810057EA7A /* ApplicationUITests.swift */; };
 		221B20D52742EF810057EA7A /* ApplicationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221B20D42742EF810057EA7A /* ApplicationUITestsLaunchTests.swift */; };
+		2233FCAA274C481400AA07FE /* Domain.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 2233FC98274C47CB00AA07FE /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2233FCAB274C482600AA07FE /* Data.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 2233FC9F274C47D500AA07FE /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2233FCAC274C483100AA07FE /* Core.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 2233FCA7274C47DC00AA07FE /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		37F0A325AE842F1CAE58BB64 /* Pods_Application.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D77BB143793E496AE5390B62 /* Pods_Application.framework */; };
 		4C2046979315845503CAAA2A /* Pods_Application_ApplicationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2419140A41A14DD55845E70E /* Pods_Application_ApplicationUITests.framework */; };
 /* End PBXBuildFile section */
@@ -37,7 +40,51 @@
 			remoteGlobalIDString = 221B20AA2742EF800057EA7A;
 			remoteInfo = Application;
 		};
+		2233FC97274C47CB00AA07FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2233FC93274C47CB00AA07FE /* Domain.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 225C81182745B07D0013E651;
+			remoteInfo = Domain;
+		};
+		2233FC9E274C47D500AA07FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2233FC99274C47D500AA07FE /* Data.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 22B349EB2743696C00C93607;
+			remoteInfo = Data;
+		};
+		2233FCA0274C47D500AA07FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2233FC99274C47D500AA07FE /* Data.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 22DB68B9274BFB3F00A43F19;
+			remoteInfo = CoreDataStackTests;
+		};
+		2233FCA6274C47DC00AA07FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2233FCA2274C47DC00AA07FE /* Core.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 221B20932742EE0A0057EA7A;
+			remoteInfo = Core;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2233FCA8274C47E700AA07FE /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2233FCAC274C483100AA07FE /* Core.framework in Copy Frameworks */,
+				2233FCAB274C482600AA07FE /* Data.framework in Copy Frameworks */,
+				2233FCAA274C481400AA07FE /* Domain.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		037ADF3AFF9F6B28C02ACAE4 /* Pods-Application.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Application.debug.xcconfig"; path = "Target Support Files/Pods-Application/Pods-Application.debug.xcconfig"; sourceTree = "<group>"; };
@@ -56,7 +103,9 @@
 		221B20CE2742EF810057EA7A /* ApplicationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApplicationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		221B20D22742EF810057EA7A /* ApplicationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationUITests.swift; sourceTree = "<group>"; };
 		221B20D42742EF810057EA7A /* ApplicationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		221B20E22742F1000057EA7A /* ApplicationPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ApplicationPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		2233FC93274C47CB00AA07FE /* Domain.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Domain.xcodeproj; path = ../Domain/Domain.xcodeproj; sourceTree = "<group>"; };
+		2233FC99274C47D500AA07FE /* Data.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Data.xcodeproj; path = ../Data/Data.xcodeproj; sourceTree = "<group>"; };
+		2233FCA2274C47DC00AA07FE /* Core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Core.xcodeproj; path = ../Core/Core.xcodeproj; sourceTree = "<group>"; };
 		2419140A41A14DD55845E70E /* Pods_Application_ApplicationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Application_ApplicationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C3C0C44BCC91A184184A3F2 /* Pods-Application-ApplicationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Application-ApplicationUITests.release.xcconfig"; path = "Target Support Files/Pods-Application-ApplicationUITests/Pods-Application-ApplicationUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4171E6587C84259001EBAB16 /* Pods-Application.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Application.release.xcconfig"; path = "Target Support Files/Pods-Application/Pods-Application.release.xcconfig"; sourceTree = "<group>"; };
@@ -97,7 +146,7 @@
 		221B20A22742EF800057EA7A = {
 			isa = PBXGroup;
 			children = (
-				221B20E22742F1000057EA7A /* ApplicationPlayground.playground */,
+				2233FC92274C477300AA07FE /* Dependencies */,
 				221B20AD2742EF800057EA7A /* Application */,
 				221B20C72742EF810057EA7A /* ApplicationTests */,
 				221B20D12742EF810057EA7A /* ApplicationUITests */,
@@ -149,6 +198,41 @@
 			path = ApplicationUITests;
 			sourceTree = "<group>";
 		};
+		2233FC92274C477300AA07FE /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				2233FC93274C47CB00AA07FE /* Domain.xcodeproj */,
+				2233FC99274C47D500AA07FE /* Data.xcodeproj */,
+				2233FCA2274C47DC00AA07FE /* Core.xcodeproj */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		2233FC94274C47CB00AA07FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2233FC98274C47CB00AA07FE /* Domain.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2233FC9A274C47D500AA07FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2233FC9F274C47D500AA07FE /* Data.framework */,
+				2233FCA1274C47D500AA07FE /* CoreDataStackTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2233FCA3274C47DC00AA07FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2233FCA7274C47DC00AA07FE /* Core.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		9D5CE30808991CF7150B1DED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +269,7 @@
 				221B20A82742EF800057EA7A /* Frameworks */,
 				221B20A92742EF800057EA7A /* Resources */,
 				C0E191AA53EFD34C74B680EC /* [CP] Embed Pods Frameworks */,
+				2233FCA8274C47E700AA07FE /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -268,6 +353,20 @@
 			mainGroup = 221B20A22742EF800057EA7A;
 			productRefGroup = 221B20AC2742EF800057EA7A /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2233FCA3274C47DC00AA07FE /* Products */;
+					ProjectRef = 2233FCA2274C47DC00AA07FE /* Core.xcodeproj */;
+				},
+				{
+					ProductGroup = 2233FC9A274C47D500AA07FE /* Products */;
+					ProjectRef = 2233FC99274C47D500AA07FE /* Data.xcodeproj */;
+				},
+				{
+					ProductGroup = 2233FC94274C47CB00AA07FE /* Products */;
+					ProjectRef = 2233FC93274C47CB00AA07FE /* Domain.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				221B20AA2742EF800057EA7A /* Application */,
@@ -276,6 +375,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		2233FC98274C47CB00AA07FE /* Domain.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Domain.framework;
+			remoteRef = 2233FC97274C47CB00AA07FE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2233FC9F274C47D500AA07FE /* Data.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Data.framework;
+			remoteRef = 2233FC9E274C47D500AA07FE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2233FCA1274C47D500AA07FE /* CoreDataStackTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CoreDataStackTests.xctest;
+			remoteRef = 2233FCA0274C47D500AA07FE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2233FCA7274C47DC00AA07FE /* Core.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Core.framework;
+			remoteRef = 2233FCA6274C47DC00AA07FE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		221B20A92742EF800057EA7A /* Resources */ = {
