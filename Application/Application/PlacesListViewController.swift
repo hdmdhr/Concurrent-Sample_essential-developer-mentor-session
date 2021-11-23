@@ -28,7 +28,7 @@ class PlacesListViewController: UIViewController {
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
-    #warning("Should use dependency injection")
+    // FIXME: - Should use dependency injection
     private var searchPlacesUseCase: ASearchPlacesUseCase! = SearchPlacesUseCase(repo: PlacesRepo.shared)
     
     /// For easy retrievemcent of a place
@@ -132,9 +132,15 @@ class PlacesListViewController: UIViewController {
                 
                 // update UI
                 spinner.stopAnimating()
+                if places.isEmpty {
+                    table.setEmptyMessage("No matching places found")
+                } else {
+                    table.backgroundView = nil
+                }
             } catch {
-                spinner.stopAnimating()
                 print(error.localizedDescription)
+                spinner.stopAnimating()
+                table.setEmptyMessage("No matching places found")
                 let networkError = error as? NetworkError
                 presentAlert(title: networkError?.errorTitle, message: networkError?.errorDescription)
             }

@@ -13,7 +13,8 @@ public extension UIViewController {
     func presentAlert(title: String?,
                       message: String?,
                       style: UIAlertController.Style = .alert,
-                      actions: [UIAlertAction] = [.init(title: "Cancel", style: .cancel)]) -> UIAlertController
+                      actions: [UIAlertAction] = [.init(title: "Cancel", style: .cancel)],
+                      completion: Completion? = nil) -> UIAlertController
     {
         let alert = UIAlertController(title: title, message: message, preferredStyle: style)
         
@@ -21,7 +22,7 @@ public extension UIViewController {
             alert.addAction(action)
         }
         
-        present(alert, animated: true)
+        present(alert, animated: true, completion: completion)
         
         return alert
     }
