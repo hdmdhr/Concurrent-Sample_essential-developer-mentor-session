@@ -12,11 +12,7 @@ extension URL {
     
     /// If any step throws an error, use the original url.
     mutating func appendQueryItems(_ queryItems: [URLQueryItem]?) {
-        guard var components = URLComponents(url: self, resolvingAgainstBaseURL: true) else { return }
-        
-        components.queryItems?.append(contentsOf: queryItems ?? [])
-        
-        self = components.url ?? self
+        self = appendingQueryItems(queryItems)
     }
     
     
@@ -24,7 +20,12 @@ extension URL {
     func appendingQueryItems(_ queryItems: [URLQueryItem]?) -> URL {
         guard var components = URLComponents(url: self, resolvingAgainstBaseURL: true) else { return self }
         
-        components.queryItems?.append(contentsOf: queryItems ?? [])
+        
+        if components.queryItems == nil {
+            components.queryItems = queryItems
+        } else {
+            components.queryItems?.append(contentsOf: queryItems ?? [])
+        }
         
         return components.url ?? self
     }

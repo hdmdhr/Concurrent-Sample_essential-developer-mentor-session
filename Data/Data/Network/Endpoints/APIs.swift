@@ -10,7 +10,7 @@ import Foundation
 enum APIs {
     
     enum Places: String, HasBaseUrl, UrlConvertible {
-        static let baseUrl: URL? = .init(string: "https://sample-api.azure-api.net/sample/")
+        static let baseUrl: URL? = .init(string: "https://sample-api-new.herokuapp.com/")
         
         case searchPlaces = "places"
     }

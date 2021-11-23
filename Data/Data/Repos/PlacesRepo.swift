@@ -25,7 +25,8 @@ public class PlacesRepo: APlacesRepo {
                                                                                 method: .get(queryItemsProvider: query))
         
         if envelop.data.currentPage == 0 {
-            persistFirstPageOfPlaces(envelop.data.items)
+            // FIXME: - this will cause crash
+//            persistFirstPageOfPlaces(envelop.data.items)
         }
         
         return envelop.data

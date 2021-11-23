@@ -25,3 +25,18 @@ public extension Places {
     }
     
 }
+
+
+
+extension Places.Place: Identifiable, Hashable {
+    
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
+    public static func == (lhs: Places.Place, rhs: Places.Place) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+    
+}

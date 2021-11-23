@@ -59,15 +59,6 @@ class CoreDataStackTests: XCTestCase {
 // extend so can do equal check
 extension Places.Place: Identifiable, Hashable {
     
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
-    }
-    
-    public static func == (lhs: Places.Place, rhs: Places.Place) -> Bool {
-        lhs.id == rhs.id
-    }
-    
-    
     static var samplePlaces: [Self] { (0...5).map{ _ in Self.makeRandomPlace() } }
     
     static func makeRandomPlace() -> Self {
