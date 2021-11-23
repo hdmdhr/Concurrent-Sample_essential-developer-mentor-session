@@ -48,6 +48,11 @@ class PlacesListViewController: UIViewController {
     private var query: Places.SearchQuery {
         .init(type: nil, keyword: searchBar.text, page: page, perPage: Self.perPage)
     }
+    @MainActor private var isFetching: Bool = false {
+        didSet {
+            _ = isFetching ? spinner.startAnimating() : spinner.stopAnimating()
+        }
+    }
     
     private var tasks: [Task<Void, Never>] = []
     private var bag: Set<AnyCancellable> = []
@@ -60,7 +65,6 @@ class PlacesListViewController: UIViewController {
         setupTableView()
         setupSearchBarTypingAction()
         
-//        fetchMore()
     }
 
 
@@ -75,6 +79,7 @@ class PlacesListViewController: UIViewController {
     }
     
     private func setupSearchBarTypingAction() {
+        // FIXME: - when typing, publisher doesn't emit new values
         searchBar.searchTextField.publisher(for: \.text)
             .compactMap{ $0 }
             .removeDuplicates()
@@ -116,22 +121,23 @@ class PlacesListViewController: UIViewController {
     private func fetchMore() {
 
         let task = Task {
-            spinner.startAnimating()
+            isFetching = true
             
             do {
                 let envelop = try await searchPlacesUseCase.search(query: query)
                 // update flag
                 isAllFetched = envelop.isAllFetched
                 
+                
                 // update data source (trigger table update)
-                // FIXME: - potential risk of appending duplicated items to array
-                places.append(contentsOf: envelop.items)
                 for place in envelop.items {
                     placesDict.updateValue(place, forKey: place.id)
                 }
+                // FIXME: - is there a better way to remove duplicates?
+                places.append(contentsOf: envelop.items.filter{ !places.contains($0) })
                 
                 // update UI
-                spinner.stopAnimating()
+                isFetching = false
                 if places.isEmpty {
                     table.setEmptyMessage("No matching places found")
                 } else {
@@ -139,7 +145,7 @@ class PlacesListViewController: UIViewController {
                 }
             } catch {
                 print(error.localizedDescription)
-                spinner.stopAnimating()
+                isFetching = false
                 table.setEmptyMessage("No matching places found")
                 let networkError = error as? NetworkError
                 presentAlert(title: networkError?.errorTitle, message: networkError?.errorDescription)
@@ -160,6 +166,7 @@ extension PlacesListViewController: UITableViewDataSourcePrefetching {
     
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
         guard !isAllFetched,
+              !isFetching,
               let maxIP = indexPaths.max(),
               maxIP.row >= places.count - 1
         else { return }
