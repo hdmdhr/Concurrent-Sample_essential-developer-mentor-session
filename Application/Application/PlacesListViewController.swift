@@ -12,10 +12,11 @@ import Domain
 import Data
 import Core
 
+typealias PlaceID = String
+typealias Place = Places.Place
+
 class PlacesListViewController: UIViewController {
 
-    typealias PlaceID = String
-    typealias Place = Places.Place
     /// Apple advised to use item identifier instead of actual item in Diffable DataSource
     typealias DataSource = UITableViewDiffableDataSource<Section, PlaceID>
     typealias Snapshot = NSDiffableDataSourceSnapshot<Section, PlaceID>
@@ -67,11 +68,21 @@ class PlacesListViewController: UIViewController {
         
     }
 
-
+    // MARK: - Navigation
+    
+    @IBSegueAction func showDetails(_ coder: NSCoder) -> PlaceDetailsViewController? {
+        guard let selectedRow = table.indexPathForSelectedRow?.row,
+              let place = places[safe: selectedRow]
+        else { return nil }
+        
+        return PlaceDetailsViewController(place: place, coder: coder)
+    }
+    
     // MARK: - Setups
     
     private func setupTableView() {
         table.prefetchDataSource = self
+        table.delegate = self
         
         table.estimatedRowHeight = 250
         table.rowHeight = UITableView.automaticDimension
@@ -152,7 +163,7 @@ class PlacesListViewController: UIViewController {
             }
         }
 
-        #warning("How to remove task from array when it's done?")
+        #warning("How to remove task from array once it's done?")
         tasks.append(task)
     }
     
@@ -178,6 +189,16 @@ extension PlacesListViewController: UITableViewDataSourcePrefetching {
     func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
         tasks.forEach{ $0.cancel() }
         tasks.removeAll()
+    }
+    
+}
+
+// MARK: - Table Delegate
+
+extension PlacesListViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }
