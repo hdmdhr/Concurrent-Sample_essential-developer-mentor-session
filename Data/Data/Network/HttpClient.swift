@@ -101,7 +101,7 @@ class HttpClient: AHttpClient {
         var data: Data = .init()
         
         do {
-            let tuple = try await urlSession.data(for: urlRequest, delegate: nil)
+            let tuple = try await urlSession.data(for: urlRequest)
             httpUrlResponse = tuple.1 as? HTTPURLResponse
             data = tuple.0
             

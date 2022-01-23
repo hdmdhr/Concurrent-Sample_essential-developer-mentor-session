@@ -17,6 +17,7 @@
 		2233FC75274C29C700AA07FE /* CDPlace+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2233FC71274C29C700AA07FE /* CDPlace+CoreDataProperties.swift */; };
 		2233FC76274C2C8700AA07FE /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E6CE372748584100D15D85 /* CoreDataStack.swift */; };
 		2233FC77274C2C8D00AA07FE /* NSManagedObjectContext+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E6CE3A27485C1F00D15D85 /* NSManagedObjectContext+.swift */; };
+		22369463276FB72900F1A955 /* URLSession+async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22369462276FB72900F1A955 /* URLSession+async.swift */; };
 		223F6DCE2745B63200D13A81 /* Domain.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 223F6DCC2745B61C00D13A81 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		223F6DE82745BBC700D13A81 /* Core.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 223F6DE72745BBB200D13A81 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		223F6E212745C84200D13A81 /* PlacesRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223F6E202745C84200D13A81 /* PlacesRepo.swift */; };
@@ -86,6 +87,7 @@
 		2233FC6A274C1BCE00AA07FE /* Data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Data.xcdatamodel; sourceTree = "<group>"; };
 		2233FC70274C29C700AA07FE /* CDPlace+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDPlace+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2233FC71274C29C700AA07FE /* CDPlace+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDPlace+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		22369462276FB72900F1A955 /* URLSession+async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+async.swift"; sourceTree = "<group>"; };
 		223F6DC72745B61C00D13A81 /* Domain.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Domain.xcodeproj; path = ../Domain/Domain.xcodeproj; sourceTree = "<group>"; };
 		223F6DE22745BBB200D13A81 /* Core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Core.xcodeproj; path = ../Core/Core.xcodeproj; sourceTree = "<group>"; };
 		223F6E202745C84200D13A81 /* PlacesRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesRepo.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 				22B34A0227436D0D00C93607 /* URL+QueryItem.swift */,
 				223F6E2E2745F25300D13A81 /* UserDefaults+.swift */,
 				22B34A142743787700C93607 /* Data+PrettyString.swift */,
+				22369462276FB72900F1A955 /* URLSession+async.swift */,
 			);
 			path = Ext;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				22E6CE382748584100D15D85 /* CoreDataStack.swift in Sources */,
 				22B34A0D27436E3600C93607 /* APIs.swift in Sources */,
 				22D7A8182746D10700CB74D5 /* RefreshTokenResponse.swift in Sources */,
+				22369463276FB72900F1A955 /* URLSession+async.swift in Sources */,
 				22D7A8162746CFB100CB74D5 /* RefreshTokenRequest.swift in Sources */,
 				22B34A0C27436E3400C93607 /* Staging.Account.swift in Sources */,
 				2243E75C274A10FA0077E6CE /* CoreDataBridgeable.swift in Sources */,
@@ -661,6 +665,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -692,6 +697,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
